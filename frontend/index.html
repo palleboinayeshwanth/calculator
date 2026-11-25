@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A small full-stack calculator team project." />
+    <title>Team Calculator</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="calculator-card" aria-labelledby="page-title">
+        <header class="page-header">
+          <p class="eyebrow">FULL-STACK SAMPLE PROJECT</p>
+          <h1 id="page-title">Team Calculator</h1>
+          <p class="subtitle">A simple frontend connected to a Node.js API.</p>
+        </header>
+
+        <form id="calculator-form" class="calculator-form">
+          <label for="first-number">First number</label>
+          <input id="first-number" name="a" type="number" step="any" placeholder="Enter a number" required />
+
+          <label for="operator">Operation</label>
+          <select id="operator" name="operator">
+            <option value="+">Addition (+)</option>
+            <option value="-">Subtraction (−)</option>
+            <option value="*">Multiplication (×)</option>
+            <option value="/">Division (÷)</option>
+          </select>
+
+          <label for="second-number">Second number</label>
+          <input id="second-number" name="b" type="number" step="any" placeholder="Enter another number" required />
+
+          <button id="calculate-button" type="submit">Calculate</button>
+        </form>
+
+        <section class="result-panel" aria-live="polite" aria-atomic="true">
+          <p class="result-label">RESULT</p>
+          <p id="result-value" class="result-value">Your result will appear here</p>
+          <p id="status-message" class="status-message" role="status"></p>
+        </section>
+
+        <section class="history-panel" aria-labelledby="history-title">
+          <div class="history-heading">
+            <h2 id="history-title">Recent calculations</h2>
+            <button id="clear-history-button" class="text-button" type="button">Clear</button>
+          </div>
+          <ul id="history-list" class="history-list">
+            <li class="empty-history">No calculations yet.</li>
+          </ul>
+        </section>
+      </section>
+      <footer class="page-footer">Built together with Git and GitHub.</footer>
+    </main>
+  </body>
+</html>
